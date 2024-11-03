@@ -168,7 +168,7 @@
   @media only screen and (max-width: 768px){
     .small-img-row {
       display: flex;
-      width: 25em;
+      width: 16em;
       justify-content: space-between;
     }
   }

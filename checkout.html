@@ -10,9 +10,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!---- icon cdn link---->
-                                                  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!---- icon cdn link---->
+        <style>
+            .off-screen-menu{
+                background-color: black;
+                color: azure;
+                height: 100vh;
+                width: 100%;
+                max-width: 450px;
+                position: fixed;
+                top: 0;
+                right: -450px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 15px;
+                font-size: 1.5rem;
+                gap: 20px;
+                text-transform: uppercase;
+                z-index: 1;
+                transition: .3s ease;
+            }
+            .off-screen-menu.action{
+                right: 0;
+            }
+        </style>                      
 
 
     </head>
@@ -20,28 +45,52 @@
     <header>
       
         <nav id="nav">
-          
-          <a href="index.html"><img src="images/logo-white.png" class="logo"></a>
-          
-          <ul class="menu-bar-side">
-            <li><a href="index.html" style=" all: unset;">Home</a></li>
-            <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-            <li><a href="#" style=" all: unset;">about</a></li>
-            <li><a href="#" style=" all: unset;">contact us</a></li>
-            <li><a href="#" style=" all: unset;">Wishlist</a></li>
-        </ul>
 
-        <ul class="menu-bar">
+            <a href="index.html"><img src="images/logo-white.png" class="logo"></a>
 
-            <li>&#36;0.00</li>
-            <li><a href="cart.html" style="all: unset;"><i class="fas fa-shopping-cart"></i></a></li>
+            <ul class="menu-bar-side">
+                <li><a href="index.html" style=" all: unset;">Home</a></li>
+                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                <li><a href="#" style=" all: unset;">about</a></li>
+                <li><a href="#" style=" all: unset;">contact us</a></li>
+                <li><a href="#" style=" all: unset;">Wishlist</a></li>
+            </ul>
 
-        </ul>
-          
-          <i class="fa fa-bars"></i>
+            <ul class="menu-bar">
+
+                <li>&#36;0.00</li>
+                <li><a href="cart.html" style="all: unset;"><i class="fas fa-shopping-cart"></i></a></li>
+
+            </ul>
+
+            <i id="bar" class="fa fa-bars"></i>
         </nav>
+
+        <div class="off-screen-menu">
+            <ul class="menu-bar-side">
+                <li><a href="index.html" style=" all: unset;">Home</a></li>
+                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                <li><a href="#" style=" all: unset;">about</a></li>
+                <li><a href="#" style=" all: unset;">contact us</a></li>
+                <li><a href="#" style=" all: unset;">Wishlist</a></li>
+                <li>&#36;0.00</li>
+                <li><a href="cart.html" style="all: unset;"><i class="fas fa-shopping-cart"></i></a></li>  
+            </ul>
+        </div>
    
-  </header>
+    </header>
+
+    <script>
+        const hamMenu = document.getElementById("bar");
+        const offScreenMenu = document.querySelector('.off-screen-menu');
+
+        hamMenu.addEventListener('click', () => {
+            // Toggle the 'action' class on the off-screen menu
+            offScreenMenu.classList.toggle('action');
+        });
+
+    </script>
+   
 
   <main>
     <div class="order-container">

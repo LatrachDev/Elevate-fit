@@ -87,6 +87,8 @@
                 <li><a href="#" style=" all: unset;">about</a></li>
                 <li><a href="#" style=" all: unset;">contact us</a></li>
                 <li><a href="#" style=" all: unset;">Wishlist</a></li>
+                <li>&#36;0.00</li>
+                <li><a href="cart.html" style="all: unset;"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
 
@@ -101,8 +103,8 @@
                 25% Off On All Products
             </h4>
 
-            <button class="shopNow">
-                <a href="Products.html" style="color: var(--orange);">shop now</a>
+            <button class="shopNow" onclick="window.location.href='Products.html'">
+                shop now
             </button>
             <button class="findMore">
                 find more
@@ -114,12 +116,12 @@
     <!--- end header --->
     <script>
         const hamMenu = document.getElementById("bar");
-const offScreenMenu = document.querySelector('.off-screen-menu');
+        const offScreenMenu = document.querySelector('.off-screen-menu');
 
-hamMenu.addEventListener('click', () => {
-    // Toggle the 'action' class on the off-screen menu
-    offScreenMenu.classList.toggle('action');
-});
+        hamMenu.addEventListener('click', () => {
+            // Toggle the 'action' class on the off-screen menu
+            offScreenMenu.classList.toggle('action');
+        });
 
     </script>
 
@@ -172,7 +174,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ shoes', name: 'Black shoes', img: 'images/product-2.jpg', price: '$200.00', description: 'Description of Product 1.' })">
@@ -187,7 +189,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Pants', name: 'Gray Pant', img: 'images/product-3.jpg', price: '$80.00', description: 'Description of Product 1.' })">
@@ -202,7 +204,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$80.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ T-Shirt', name: 'Dark Printed T-shirt', img: 'images/product-4.jpg', price: '$50.00', description: 'Description of Product 1.' })">
@@ -218,7 +220,7 @@ hamMenu.addEventListener('click', () => {
 
                 </div>
                 <p>$50.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
         </div>
 
@@ -239,7 +241,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ T-Shirt', name: 'darck Printed T-shirt', img: 'images/product-6.jpg', price: '$50.00', description: 'Description of Product 1.' })">
@@ -254,7 +256,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Socks', name: 'Sock', img: 'images/product-7.jpg', price: '$50.00', description: 'Description of Product 1.' })">
@@ -269,7 +271,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$25.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Watch', name: 'Darck Watch', img: 'images/product-8.jpg', price: '$300.00', description: 'Description of Product 1.' })">
@@ -285,7 +287,7 @@ hamMenu.addEventListener('click', () => {
 
                 </div>
                 <p>$300.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
         </div>
         <div class="row">
@@ -301,7 +303,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$300.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Shoes', name: 'Black and Red Shoes', img: 'images/product-10.jpg', price: '$200.00', description: 'Description of Product 1.' })">
@@ -316,7 +318,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Shoes', name: 'White Shoes ', img: 'images/product-11.jpg', price: '$200.00', description: 'Description of Product 1.' })">
@@ -331,7 +333,7 @@ hamMenu.addEventListener('click', () => {
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
 
             <div class="col-4 product" onclick="goToProduct({cat:'Home/ Pants', name: 'Black Pants', img: 'images/product-12.jpg', price: '$80.00', description: 'Description of Product 1.' })">
@@ -347,7 +349,7 @@ hamMenu.addEventListener('click', () => {
 
                 </div>
                 <p>$80.00</p>
-                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Card</button>
+                <button class="add-to-cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</button>
             </div>
         </div>
 

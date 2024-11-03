@@ -29,7 +29,7 @@ nav ul li{
 /*for menu links*/
 a{
     text-decoration: none;
-    color:#555;
+    /* color:#555; */
 }
 p{
     color:#555;
@@ -47,10 +47,7 @@ p{
     flex-wrap: wrap;/*wrap place single line or multi lines in given space.*/ 
     justify-content: space-around;/*"Display the flex items with space before, between, and after the lines:"*/
 }
-.col-2{
-    flex-basis: 50%;/*divide it into haif*/
-    min-width: 300px;
-}
+
 .col-2 img{
     max-width: 65%;
     padding: 50px 0px;/*top bottom 50, left right 0*/
@@ -356,7 +353,7 @@ select:focus{
     padding: 0;
 }
 .single-product .col-2{
-    padding: 20px;
+    /* padding: 10px; */
     text-align: left;
 }
 
@@ -388,7 +385,7 @@ input:focus{
 }
 .small-img-row{
     display:flex;/*make all 4 images flexible*/
-    width: 46em;
+    width: 35em;
     justify-content: space-between;/*this will make all 4 images to take equal available space in single line without any gap, mean 25% each col, and to place gap between each col, we call col below and made 24% so to have a gap*/
 }
 .small-img-col{
@@ -396,6 +393,7 @@ input:focus{
 }
 .single-product .col-2 p{
     margin-left: 0px;
+    width: 300px;
 }
 .single-product .col-2 h1{
     margin-left: 0px;
@@ -572,15 +570,14 @@ input[type="range"]{
     .row{/*this is the row which we have used in every section*/
         text-align: center;/*when open on mobile, we make text in every row to be center align*/
     }
-    .col-2, .col-3,.col-4{/*for all columns view on mobile, we want one column single line occupying 100% width we not want 3 or 4 in single line*/
-        flex-basis: 100%;
-    }
+    
     /*for single product detail page*/
     .single-product .row{
         text-align: left;
     }
     .single-product .col-2{
-        padding: 20px;
+        /* padding: 20px; */
+        margin-left: 20px;
     }
     .single-product h1{
         font-size: 26px;
@@ -643,3 +640,11 @@ input[type="range"]{
     margin-right: 15px;
 }
 
+@media screen and (min-width: 768px) {
+
+    .single-product .col-2 {
+        padding: 10px;
+        text-align: left;
+        width: 48%;
+    }
+}
